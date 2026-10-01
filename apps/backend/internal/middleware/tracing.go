@@ -5,7 +5,6 @@ import (
 	"github.com/newrelic/go-agent/v3/integrations/nrecho-v4"
 	"github.com/newrelic/go-agent/v3/integrations/nrpkgerrors"
 	"github.com/newrelic/go-agent/v3/newrelic"
-
 	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/server"
 )
 
