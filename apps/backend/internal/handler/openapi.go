@@ -20,6 +20,7 @@ func NewOpenAPIHandler(s *server.Server) *OpenAPIHandler {
 	}
 }
 
+// ServeOpenAPIUI serves the OpenAPI UI HTML page
 func (h *OpenAPIHandler) ServeOpenAPIUI(c echo.Context) error {
 	templateBytes, err := os.ReadFile("static/openapi.html")
 	c.Response().Header().Set("Cache-Control", "no-cache")
