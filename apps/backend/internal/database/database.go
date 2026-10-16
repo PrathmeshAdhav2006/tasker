@@ -8,14 +8,14 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/config"
+	loggerConfig "github.com/PrathmeshAdhav2006/go-boilerplate/internal/logger"
 	pgxzero "github.com/jackc/pgx-zerolog"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/jackc/pgx/v5/tracelog"
 	"github.com/newrelic/go-agent/v3/integrations/nrpgx5"
 	"github.com/rs/zerolog"
-	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/config"
-	loggerConfig "github.com/PrathmeshAdhav2006/go-boilerplate/internal/logger"
 )
 
 type Database struct {

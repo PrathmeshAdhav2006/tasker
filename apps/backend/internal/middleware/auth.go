@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/errs"
+	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/server"
 	"github.com/clerk/clerk-sdk-go/v2"
 	clerkhttp "github.com/clerk/clerk-sdk-go/v2/http"
 	"github.com/labstack/echo/v4"
-	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/errs"
-	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/server"
 )
 
 type AuthMiddleware struct {
@@ -22,6 +22,7 @@ func NewAuthMiddleware(s *server.Server) *AuthMiddleware {
 	}
 }
 
+// RequireAuth is a middleware function that checks for the presence of a valid Clerk session in the request context.
 func (auth *AuthMiddleware) RequireAuth(next echo.HandlerFunc) echo.HandlerFunc {
 	return echo.WrapMiddleware(
 		clerkhttp.WithHeaderAuthorization(

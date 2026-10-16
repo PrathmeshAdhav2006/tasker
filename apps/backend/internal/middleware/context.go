@@ -3,11 +3,11 @@ package middleware
 import (
 	"context"
 
+	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/logger"
+	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/server"
 	"github.com/labstack/echo/v4"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/rs/zerolog"
-	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/logger"
-	"github.com/PrathmeshAdhav2006/go-boilerplate/internal/server"
 )
 
 const (
